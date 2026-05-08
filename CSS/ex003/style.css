@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(50, 175, 175);
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: red;
+}
+h2 {
+  color: green;
+}
+P {
+  color: yellow;
+}
+a {
+  color: rgb(8, 3, 3);
+}
+

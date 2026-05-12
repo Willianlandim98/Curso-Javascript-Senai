@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(215, 219, 178);
+}
+
+/*Para estilizar IDs, usamos "#" */
+/*Para estilizar Classes, usamos "." */
+
+#tituloPrincipal {
+  background-color: rgb(75, 107, 167);
+  color: rgb(179, 91, 32);
+}
+
+.Modulo{
+  background-color: rgb(245, 158, 123);
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.Básico{
+    color: yellow;
+}
+
+.Intermediário{
+    color: red;
+}
+
+.Avançado{
+    color: green;
+}

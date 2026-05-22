@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert</title>
+  </head>
+  <body>
+    <h1>Alertas</h1>
+
+    <script>
+      // window.alert("Bem vindo ao site!!")
+
+      // window.confirm("Deseja continuar?")
+
+      let nomeUsuario = window.prompt("Digite o seu nome:");
+      window.alert(`Olá, ${nomeUsuario}! seja bem vindo ao site`);
+
+      let escolhaUsuario = window.confirm("Deseja excluir este item?");
+      console.log('A escolha do usuario resultou em: ', escolhaUsuario)
+      if (escolhaUsuario) {
+        console.log("Excluindo o item....");
+      } else {
+        console.log("Fechar uma tela");
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Somar valores</h1>
+    
+<input type="number" name="numero1" id="numero1">
+
+<input type="number" name="numero2" id="numero2">
+
+<input type="button" value="Somar" onclick="somarNumeros()">
+
+
+<p id="resultado">Resultado... </p>
+
+
+<script>
+function somarNumeros(){
+    let numero1 = Number(document.getElementById('numero1').value)
+    let numero2 = Number(document.getElementById('numero2').value)
+
+    let soma = numero1 + numero2
+
+    let paragrafo = document.getElementById('resultado')
+    paragrafo.innerHTML = `O resultado da soma é <strong>${soma}</strong>`
+
+}
+
+function mostrarMensagem(){
+    console.log("Clicou no botão")
+}
+
+function trocarCor(){
+    window.document.body.style.backgroundColor = 'red'
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex 09</title>
+  </head>
+  <body>
+    <h1>Consultar CEP</h1>
+
+    <input type="text" name="cep" id="cep" />
+    <button id="button">Consultar</button>
+
+    <p id="rua"></p>
+    <p id="bairro"></p>
+    <p id="estado"></p>
+    <p id="cidade"></p>
+
+    <script>
+      let botao = document.getElementById("button");
+
+      let rua = document.getElementById("rua");
+      let bairro = document.getElementById("bairro");
+      let estado = document.getElementById("estado");
+      let cidade = document.getElementById("cidade");
+
+      botao.addEventListener("click", buscarCep);
+
+      async function buscarCep() {
+        let cepUsuaruio = document.getElementById("cep").value;
+
+        let urlApi = `https://viacep.com.br/ws/${cepUsuaruio}/json/`;
+
+        let response = await fetch(urlApi);
+
+        let dados = await response.json();
+
+        rua.innerHTML = `Rua: ${dados.logradouro}`;
+        bairro.innerHTML = `Bairro: ${dados.bairro}`;
+        estado.innerHTML = `Estado: ${dados.estado}`;
+        cidade.innerHTML = `Cidade: ${dados.localidade}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form {
+        background-color: rgb(245, 245, 245);
+        width: 300px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgb(54, 197, 90);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 2px 1px 5px 0px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(52, 235, 61);
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+      }
+
+      input:focus{
+        outline: none; 
+      }
+    </style>
+
+
+  </head>
+
+  <body>
+    <form id="form">
+      <h1>Login</h1>
+     
+ <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="password">Senha:</label>
+      <input type="password" name="" id="senha" required />
+
+      <button type="submit" id="botao">Enviar</button>
+    </form>
+
+    <script>
+      form.addEventListener("submit", function(event){
+         event.preventDefault();
+
+
+      let userDigitado = document.getElementById ("email").value
+      let senhaDigitada = document.getElementById ("senha").value
+      
+
+      const userCorreto = "Willian@gmail.com"
+      const senhaCorreta = "12345"
+
+      if (userDigitado === userCorreto && senhaDigitada === senhaCorreta){
+        window.location.href = "layout.html";
+      }else{
+        alert("Email ou senha incorreta")
+      }
+    })
+
+    </script>
+
+  </body>
+</html>
